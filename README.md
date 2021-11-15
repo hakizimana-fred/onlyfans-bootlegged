@@ -13,8 +13,8 @@
 install praw with pip3 install praw
 You must add Praw credentials   
 then
-python3 app.py
+python3 main.py
 
 ***
 ## How to upload Videos to Youtube
-scrape your content off explicit off redit
+scrape onlyfans explicit  off redit
