@@ -16,5 +16,5 @@ then
 python3 main.py
 
 ***
-## How to upload Videos to Youtube
+## Main use 
 scrape onlyfans explicit  off redit
