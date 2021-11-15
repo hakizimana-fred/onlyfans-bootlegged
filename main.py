@@ -1,9 +1,10 @@
-from http import client
 import praw
 import json
 import requests
 from random_string import file_random
 import os
+from flask  import Flask, jsonify
+app = Flask(__name__)
 
 def saveToPath():
     path = 'hotimages'
@@ -34,9 +35,15 @@ def main():
     image_urls = []
     for content in onlyfans_subreddits:
         subreddit = reddit.subreddit(content)
-        for submission in subreddit.top(limit=2):
+        for submission in subreddit.top(limit=1):
             image_urls.append(submission.url)
     save_images(image_urls)
+    return image_urls
+
+@app.route('/onlyfan-girls/', methods=['GET', 'POST'])
+def server():
+    urls = main()
+    return jsonify(urls)
 
 if __name__ == '__main__':
-    main()
+    app.run(host='0.0.0.0', port=5000)
