@@ -9,7 +9,7 @@
 
 👤 **Haki Fred**
 
-## How to scrape Videos
+## How to
 install praw with pip3 install praw
 You must add Praw credentials   
 then
